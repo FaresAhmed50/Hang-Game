@@ -1,0 +1,225 @@
+body{
+
+background-color: aqua;
+}
+
+
+* , *::after , *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    /* max-width: 1280px; */
+    margin: 0 auto;
+    /* background-color: var(--off-white); */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.containerr{
+
+    width: 90vw;
+    background-color: #ffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+
+.win{
+
+    height: 50vh;
+    text-align: center;
+
+
+    
+    position: relative;
+    top: calc(40vh / 2);
+
+    h1{
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+}
+
+.lose{
+
+    
+    height: 50vh;
+    text-align: center;
+
+
+    
+    position: relative;
+    top: calc(40vh / 2);
+
+    h1{
+        font-size: 30px;
+        font-weight: 500;
+    }
+}
+
+.game{
+    position: relative;
+    height: 40vh;
+}
+
+
+.stage{
+
+    margin-top: 100px;
+
+
+    width: 10px;
+    height: 250px;
+    background-color: black;
+    position: relative;
+    left: calc(90vw / 2 - 100px);
+
+}
+
+.stage-2{
+
+
+    margin-bottom: 50px;
+
+
+    width: 200px;
+    height: 10px;
+    background-color: black;
+    position: relative;
+    left: calc(90vw / 2 - 100px);
+}
+
+.hang{
+    width: 100px;
+    height: 5px;
+    background-color: black;
+    position: relative;
+    left: calc(90vw / 2 - 100px );
+    top: -310px;
+}
+
+.rod{
+    width: 5px;
+    height: 25px;
+    background-color: black;
+    position: relative;
+    left: calc(90vw / 2 - 5px );
+    top: -310px;
+}
+
+.head{
+
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    border: 2px solid black;
+    position: relative;
+    left: calc(90vw / 2 - 25px );
+    top: -311px;
+}
+
+.body{
+
+    width: 5px;
+    height: 80px;
+    background-color: black;
+    position: relative;
+    left: calc(90vw / 2 - 2.5px );
+    top: -311.5px;
+
+}
+
+.right-arm{
+
+    width: 5px;
+    height: 30px;
+    background-color: black;
+    position: relative;
+    left: calc(90vw / 2 + 9px );
+    top: -380px;
+    rotate: -45deg;
+
+
+}
+
+.left-arm{
+
+    width: 5px;
+    height: 30px;
+    background-color: black;
+    position: relative;
+    left: calc(90vw / 2 - 12px );
+    top: -410px;
+    rotate: 45deg;
+
+}
+
+
+.left-leg{
+
+    width: 5px;
+    height: 30px;
+    background-color: black;
+    position: relative;
+    left: calc(90vw / 2 + 9px );
+    top: -380px;
+    rotate: -45deg;
+
+
+}
+
+
+.right-leg{
+
+    width: 5px;
+    height: 30px;
+    background-color: black;
+    position: relative;
+    left: calc(90vw / 2 - 12px );
+    top: -410px;
+    rotate: 45deg;
+
+}
+
+
+.key-bord{
+
+    width: 40vw;
+    position: relative;
+    left: 25%;
+
+}
+
+.word-gess{
+
+
+    p{
+        font-size: 30px;
+        font-weight: bold;
+    }
+}
+
+
+@media screen and (max-width : 1161px ) {
+
+
+
+.key-bord{
+
+    width: 90vw;
+    position: relative;
+    left: 0;
+
+}
+
+}
+
+
