@@ -1,8 +1,6 @@
 body{
 
-background-color: #FFFF;
-
-
+background-color: aqua;
 }
 
 
@@ -26,7 +24,7 @@ a {
 .containerr{
 
     width: 90vw;
-    background-color: transparent;
+    background-color: #ffff;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -37,8 +35,8 @@ a {
 .contaner{
 
     
-    width: 30vw;
-    background-color: #E9AB53;
+    width: 80vw;
+    background-color: #ffff;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -87,13 +85,7 @@ a {
     height: 40vh;
 }
 
-.img{
 
-bottom: -200px;
-right: 0;
-
-z-index: -1;
-}
 
 
 .stage{
@@ -243,11 +235,6 @@ z-index: -1;
     position: relative;
     left: 0;
 
-}
-
-.contaner{
-
-    width: 80vw;
 }
 
 }
