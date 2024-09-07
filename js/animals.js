@@ -1,4 +1,4 @@
-
+var Hint = document.querySelector(".hint");
 var keyBoard = document.querySelector(".key-bord");
 var wordGess = document.querySelector(".word-gess");
 var head = document.querySelector(".head");
@@ -12,14 +12,39 @@ var  win = document.querySelector(".win");
 var lose = document.querySelector(".lose");
 
 
-
 let animals = [
-    "Lion", "Tiger", "Elephant", "Giraffe", "Kangaroo", "Panda", 
-    "Penguin", "Dolphin", "Zebra", "Cheetah", "Bear", "Wolf", 
-    "Rhinoceros", "Hippo", "Leopard", "Crocodile", "Koala", 
-    "Eagle", "Shark", "Whale", "Ostrich", "Peacock", "Frog", 
-    "Snake", "Turtle", "Bat", "Octopus", "Fox", "Rabbit", "Monkey"
+    { name: "Lion", hint: "Often associated with bravery and strength in many cultures" },
+    { name: "Tiger", hint: "This animal is known for being elusive and solitary in the wild" },
+    { name: "Elephant", hint: "Known to have excellent memory and strong family bonds" },
+    { name: "Giraffe", hint: "Its unique body structure allows it to reach areas other animals can't" },
+    { name: "Kangaroo", hint: "Native to a region known for its arid climate, this animal moves in leaps" },
+    { name: "Panda", hint: "An animal that's often a symbol for conservation efforts" },
+    { name: "Penguin", hint: "Thrives in harsh, icy environments, but never flies" },
+    { name: "Dolphin", hint: "A creature famous for its intelligence and echolocation skills" },
+    { name: "Zebra", hint: "No two of these animals share the same pattern" },
+    { name: "Cheetah", hint: "Known for bursts of incredible speed over short distances" },
+    { name: "Bear", hint: "A powerful animal often seen preparing for long periods of rest" },
+    { name: "Wolf", hint: "This animal is known for its teamwork and communication" },
+    { name: "Rhinoceros", hint: "Despite its tough appearance, this animal has poor eyesight" },
+    { name: "Hippo", hint: "Spends much of its life submerged, yet it's highly territorial on land" },
+    { name: "Leopard", hint: "An elusive animal known for its rosette-like spots and agility" },
+    { name: "Crocodile", hint: "Ancient and powerful, this animal often waits patiently for hours" },
+    { name: "Koala", hint: "It has a diet that's surprisingly specific and limited to one type of leaf" },
+    { name: "Eagle", hint: "This creature is known for its keen sight and lofty perches" },
+    { name: "Shark", hint: "A misunderstood predator, often highlighted for its rows of teeth" },
+    { name: "Whale", hint: "This massive ocean dweller communicates through complex sounds" },
+    { name: "Ostrich", hint: "This animal has impressive speed despite its inability to leave the ground" },
+    { name: "Peacock", hint: "Famous for its elaborate displays, often associated with beauty and pride" },
+    { name: "Frog", hint: "A creature that undergoes significant transformation during its life" },
+    { name: "Snake", hint: "Its movement is silent, and its skin is shed periodically" },
+    { name: "Turtle", hint: "Known for its longevity and protective, natural armor" },
+    { name: "Bat", hint: "One of the few creatures that uses sound to navigate its surroundings" },
+    { name: "Octopus", hint: "Has the ability to blend into its environment using remarkable camouflage" },
+    { name: "Fox", hint: "Often portrayed as cunning, this animal is mostly active during twilight" },
+    { name: "Rabbit", hint: "This animal is known for being a symbol of fertility in many cultures" },
+    { name: "Monkey", hint: "A social creature known for its curiosity and dexterous hands" }
 ];
+
 
 var counter = 0 ;
 
@@ -83,12 +108,31 @@ function choose_word(){
 
     console.log(random);
     
-    var word = animals[random];
+    var word = animals[random].name;
     word.toUpperCase();
     console.log(word);
-    
+
+
+    creatHint(random);
     return word;
 }
+
+
+
+function creatHint(random){
+
+
+
+    var hint = `<div class="d-flex gap-2 justify-content-center">
+        <p class="text-danger h5">Hint : </p>
+        <p class="h5">${animals[random].hint}</p>
+        </div>`
+
+    Hint.innerHTML = hint;
+
+
+}
+
 
 
 
@@ -165,6 +209,7 @@ function isWin(){
         game.classList.add("d-none");
         wordGess.classList.add("d-none");
         keyBoard.classList.add("d-none");
+        Hint.classList.add("d-none");
         win.classList.remove("d-none")
         win.classList.add("d-block ");
     }
@@ -179,6 +224,7 @@ function isLose(){
         game.classList.add("d-none");
         wordGess.classList.add("d-none");
         keyBoard.classList.add("d-none");
+        Hint.classList.add("d-none");
         lose.classList.remove("d-none")
         lose.classList.add("d-block ");
     }
